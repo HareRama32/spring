@@ -3,10 +3,35 @@ package com.express.di.setter.model;
 import java.util.Map;
 
 public class Person {
-    public String name;
-    public String houseNo;
-    public Family family;
-    public Job job;
-    public Map<String, String> importantNumbers;
+
+    private String name;
+    private int houseNo;
+    private Family family;
+    private Job job;
+    private Map<String, String> importantNumbers;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setHouseNo(int houseNo) {
+        this.houseNo = houseNo;
+    }
+
+    public void setFamily(Family family) {
+        this.family = family;
+    }
+
+    public void setJob(Job job) {
+        this.job = job;
+    }
+
+    public void setImportantNumbers(Map<String, String> importantNumbers) {
+        this.importantNumbers = importantNumbers;
+    }
+
+    public void display(){
+        System.out.println(name + " : " + houseNo + " : " + family + " : " + job + " : " + importantNumbers);
+    }
 
 }

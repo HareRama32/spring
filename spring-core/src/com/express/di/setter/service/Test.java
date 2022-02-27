@@ -8,7 +8,6 @@ public class Test {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("person.xml");
         Person person = (Person) context.getBean("krishnaObject");
-        System.out.println(person.name + " : " + person.houseNo + " : " + person.family + " : "+
-                person.job + " : " + person.importantNumbers);
+        person.display();
     }
 }

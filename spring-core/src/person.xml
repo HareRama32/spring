@@ -3,5 +3,19 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                 http://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="krishnaObject" class="com.express.di.setter.model.Person"></bean>
+    <bean id="krishnaObject" class="com.express.di.setter.model.Person">
+        <property name="name" value="Krishna"/>
+        <property name="houseNo" value = "11" />
+        <property name="job" ref = "job" />
+        <property name="family" ref = "family" />
+        <property name="importantNumbers">
+            <map>
+                <entry key="passport" value="1234567890" />
+                <entry key="pan" value="ABCDEFGHI" />
+            </map>
+
+        </property>
+    </bean>
+    <bean id="job" class="com.express.di.setter.model.Job"/>
+    <bean id="family" class="com.express.di.setter.model.Family"/>
 </beans>
