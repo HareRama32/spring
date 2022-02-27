@@ -1,5 +1,6 @@
 package com.express.di.setter.model;
 
+import java.util.List;
 import java.util.Map;
 
 public class Person {
@@ -8,7 +9,13 @@ public class Person {
     private int houseNo;
     private Family family;
     private Job job;
+
+    private List<String> favColors;
     private Map<String, String> importantNumbers;
+
+    public void setFavColors(List<String> favColors) {
+        this.favColors = favColors;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -31,7 +38,8 @@ public class Person {
     }
 
     public void display(){
-        System.out.println(name + " : " + houseNo + " : " + family + " : " + job + " : " + importantNumbers);
+        System.out.println(name + " : " + houseNo + " : " + family + " : " + job + " : " + importantNumbers + " : " +
+                favColors);
     }
 
 }

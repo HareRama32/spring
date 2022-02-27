@@ -6,7 +6,9 @@
     <bean id="krishnaObject" class="com.express.di.setter.model.Person">
         <property name="name" value="Krishna"/>
         <property name="houseNo" value = "11" />
-        <property name="job" ref = "job" />
+        <property name="job">
+            <bean class="com.express.di.setter.model.Job"/>
+        </property>
         <property name="family" ref = "family" />
         <property name="importantNumbers">
             <map>
@@ -14,6 +16,13 @@
                 <entry key="pan" value="ABCDEFGHI" />
             </map>
 
+        </property>
+        <property name="favColors">
+            <list>
+                <value>Red</value>
+                <value>Green</value>
+                <value>Blue</value>
+            </list>
         </property>
     </bean>
     <bean id="job" class="com.express.di.setter.model.Job"/>
